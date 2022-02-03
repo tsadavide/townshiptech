@@ -1,0 +1,73 @@
+h1 {
+  font-family: Roboto Slab, serif;
+  text-align: center;
+}
+
+.curtain {
+  background: rgba(248,48,91,1);
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+}
+
+.curtain__wrapper {
+  height: 100%;
+  width: 100%
+}
+
+.curtain__panel {
+  background-image: url("https://images.all-free-download.com/images/graphiclarge/beautiful_red_curtain_picture_170080.jpg");
+  float: left;
+  position: relative;
+  width: 50%;
+  height: 100vh;
+  z-index: 2;
+  transition: all 1s ease-out;
+  text-transform: uppercase;
+  color: white;
+  font-size: 1.2em;
+}
+
+
+
+input[type=checkbox] {
+  cursor: pointer;
+  position: absolute;
+  height: 100%;
+  opacity: 0;
+  width: 100%;
+  z-index: 100;
+  top:0;/*fix Moz bug*/
+  left:0;/*fix Moz bug*/
+}
+
+/*When the checkbox is checked*/
+input[type=checkbox]:checked ~ div.curtain__panel--left {
+  transform: translateX(0);
+}
+
+input[type=checkbox]:checked ~ div.curtain__panel--right {
+   transform: translateX(0);
+}
+
+.curtain__panel--left {
+  transform: translateX(-100%);
+}
+.curtain__panel--right {
+  transform: translateX(100%);
+}
+
+.curtain__prize {
+  background: -moz-linear-gradient(top, rgba(248,48,91,1) 0%, rgba(246,14,72,1) 33%, rgba(240,25,79,1) 34%, rgba(243,74,18,1) 100%);
+  background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(248,48,91,1)), color-stop(33%, rgba(246,14,72,1)), color-stop(34%, rgba(240,25,79,1)), color-stop(100%, rgba(243,74,18,1)));
+  background: -webkit-linear-gradient(top, rgba(248,48,91,1) 0%, rgba(246,14,72,1) 33%, rgba(240,25,79,1) 34%, rgba(243,74,18,1) 100%);
+  background: -o-linear-gradient(top, rgba(248,48,91,1) 0%, rgba(246,14,72,1) 33%, rgba(240,25,79,1) 34%, rgba(243,74,18,1) 100%);
+  background: -ms-linear-gradient(top, rgba(248,48,91,1) 0%, rgba(246,14,72,1) 33%, rgba(240,25,79,1) 34%, rgba(243,74,18,1) 100%);
+  background: linear-gradient(to bottom, rgba(248,48,91,1) 0%, rgba(246,14,72,1) 33%, rgba(240,25,79,1) 34%, rgba(243,74,18,1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f8305b', endColorstr='#f34a12', GradientType=0 );
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  z-index: 1;
+  font-family: script;
+}
