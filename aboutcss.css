@@ -1,0 +1,18 @@
+.glowingtexter {
+    animation-fill-mode: forwards;
+	animation-name: text-glowing;
+	animation-duration: 5s, 1s, 1s;
+	animation-timing-function: ease-out, ease-in-out, ease-in-out;
+	animation-delay: 1s;
+	animation-iteration-count: 1, 1, infinite;
+	animation-direction: normal, normal, alternate;
+}
+
+
+
+
+@keyframes text-glowing {
+	from { text-shadow: 0 0 10px #ff7a7a; }
+	to { text-shadow: 0 0 15px #ff7a7a, 0 0 20px #ff7a7a, 0 0 30px #fc4f4f; }
+}
+
